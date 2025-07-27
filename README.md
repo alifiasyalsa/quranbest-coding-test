@@ -9,8 +9,9 @@ Komponen ini dikembangkan sebagai bagian dari proses seleksi di QuranBest pada b
 - [react-circular-progressbar](https://www.npmjs.com/package/react-circular-progressbar)
 - React Icons
 
+<pre>
 ## Struktur Project
-
+<code> ```
 quranbest-coding-test/
 ├── src/
 │   ├── assets/
@@ -20,7 +21,8 @@ quranbest-coding-test/
 │   ├── components/
 │   │   └── CircularProgress.jsx
 │   └── HasilPenilaian.jsx
-
+``` </code>
+</pre>
 
 ## Responsiveness
 Sudah diuji pada:
