@@ -9,10 +9,10 @@ const CircularProgress = ({ score = 0, desc = 0, title = "Score" }) => {
         value={score}
         maxValue={100}
         text={""}
-        strokeWidth={12}
+        strokeWidth={14}
         styles={buildStyles({
-          pathColor: "#22c55e",
-          trailColor: "#e5e7eb",
+          pathColor: "#11B347",
+          trailColor: "#EFEFEF",
           textColor: "transparent",
           textSize: "0px",
           strokeLinecap: "round",
@@ -25,7 +25,7 @@ const CircularProgress = ({ score = 0, desc = 0, title = "Score" }) => {
           {typeof score === "number" ? score.toFixed(1).replace(".", ",") : "-"}
         </p>
         {desc !== undefined && (
-          <div className="bg-green-100 text-green-600 text-xs px-2 py-1 rounded-full flex items-center gap-1">
+          <div className="bg-green-100 text-green-600 text-xs px-2 py-1 rounded-full font-semibold flex items-center gap-1">
             +{desc} <FaArrowTrendUp size={12} />
           </div>
         )}
