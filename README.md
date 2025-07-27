@@ -9,6 +9,19 @@ Komponen ini dikembangkan sebagai bagian dari proses seleksi di QuranBest pada b
 - [react-circular-progressbar](https://www.npmjs.com/package/react-circular-progressbar)
 - React Icons
 
+## Struktur Project
+
+quranbest-coding-test/
+├── src/
+│   ├── assets/
+│   │   └── icons/
+│   │       ├── BadgeIcon.svg
+│   │       └── SuccessIcon.svg
+│   ├── components/
+│   │   └── CircularProgress.jsx
+│   └── HasilPenilaian.jsx
+
+
 ## Responsiveness
 Sudah diuji pada:
 - Mobile
