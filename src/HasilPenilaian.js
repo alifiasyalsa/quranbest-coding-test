@@ -6,18 +6,16 @@ const HasilPenilaian = () => {
   const dataScore = { score: 84.4, desc: 12 };
 
   return (
-    <div className="min-h-screen bg-gray-100 flex items-center justify-center p-4">
-      <div className="w-full max-w-md">
+    <div className="min-h-screen bg-gray-100 flex items-center justify-center p-6">
+      <div className="w-full max-w-sm">
         {/* Header */}
-        <div className="text-xl font-bold mb-3 text-center md:text-left">
-          Hasil Penilaian
-        </div>
+        <div className="text-xl font-bold mb-2">Hasil Penilaian</div>
 
         {/* Main Container */}
-        <div className="bg-white rounded-xl shadow-lg w-full p-5 md:p-6 relative">
+        <div className="bg-white rounded-xl shadow-lg w-full max-w-md p-6 relative">
           {/* Main Content Header */}
           <div className="flex items-center justify-between border-b border-gray-200 pb-3 mb-4">
-            <p className="text-sm md:text-base font-semibold text-gray-800">
+            <p className="text-base font-semibold text-gray-800">
               24 Juli 2025
             </p>
             <button className="flex items-center gap-1 text-orange-500 hover:text-orange-600 text-sm font-semibold">
@@ -26,20 +24,29 @@ const HasilPenilaian = () => {
             </button>
           </div>
 
-          <div className="flex flex-col md:flex-row items-center md:items-start gap-4 md:gap-6">
+          <div className="flex items-start gap-4 sm:gap-6">
             {/* Diagram */}
-            <div className="flex-shrink-0">
+
+            <div className="block sm:hidden">
               <CircularProgress
+                size={140}
+                score={dataScore.score}
+                desc={dataScore.desc}
+                title={"Score"}
+              />
+            </div>
+            <div className="hidden sm:block">
+              <CircularProgress
+                size={154}
                 score={dataScore.score}
                 desc={dataScore.desc}
                 title={"Score"}
               />
             </div>
 
-            {/* Informasi Nilai & Level */}
-            <div className="flex-1 space-y-4 w-full">
+            <div className="flex-1 space-y-4">
               {/* Nilai */}
-              <div className="flex gap-3 items-start p-3">
+              <div className="flex gap-3 items-start p-4">
                 <div className="w-[4px] h-12 bg-green-100 rounded"></div>
                 <div className="flex flex-col">
                   <p className="text-sm text-gray-600">Nilai</p>
@@ -57,16 +64,12 @@ const HasilPenilaian = () => {
               </div>
 
               {/* Level Tahsin */}
-              <div className="flex gap-3 items-start p-3">
+              <div className="flex gap-3 items-start p-4">
                 <div className="w-[4px] h-12 bg-orange-100 rounded"></div>
                 <div className="flex flex-col">
                   <p className="text-sm text-gray-600">Level Tahsin</p>
                   <div className="flex items-center mt-1">
-                    <img
-                      src={BadgeIcon}
-                      alt="Badge"
-                      className="w-5 h-6 mr-2"
-                    />
+                    <img src={BadgeIcon} alt="Badge" className="w-5 h-6 mr-2" />
                     <p className="font-semibold text-gray-800">
                       Kelas <span className="font-bold">3B</span>
                     </p>
@@ -83,11 +86,11 @@ const HasilPenilaian = () => {
           </div>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-3 mt-6">
-            <button className="flex-1 bg-orange-500 text-white py-2 px-5 rounded-lg font-semibold hover:bg-orange-600">
+          <div className="flex space-x-4 mt-6">
+            <button className="flex-1 bg-orange-500 text-white py-2 md:px-8 sm:px-7 rounded-lg font-semibold hover:bg-orange-600">
               Ikut Kelas Tashin
             </button>
-            <button className="flex-1 bg-gray-200 text-gray-500 py-2 px-5 rounded-lg font-semibold">
+            <button className="flex-1 bg-gray-200 text-gray-500 py-2 px-1 rounded-lg font-semibold">
               More Info
             </button>
           </div>

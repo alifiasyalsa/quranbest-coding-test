@@ -2,9 +2,9 @@ import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 import { FaArrowTrendUp } from "react-icons/fa6";
 
-const CircularProgress = ({ score = 0, desc = 0, title = "Score" }) => {
+const CircularProgress = ({ score = 0, desc = 0, title = "Score", size=120 }) => {
   return (
-    <div className="relative w-[152px] h-[152px]">
+    <div className="relative" style={{ width: size, height: size }}>
       <CircularProgressbar
         value={score}
         maxValue={100}
